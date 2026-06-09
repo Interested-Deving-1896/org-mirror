@@ -1,20 +1,75 @@
+[update-readmes]   Mode: rewrite — migrating to template structure...
 # org-mirror
 
-[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/OpenOS-Project-OSP/org-mirror)
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/org-mirror)
 
-Mirrors all repos from **OpenOS-Project-OSP** → **OpenOS-Project-Ecosystem-OOC**.
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-Runs daily at 01:30 UTC via GitHub Actions. Can also be triggered manually.
+## Architecture
 
-## Setup
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-1. Create a PAT with `repo` and `admin:org` scopes (access to both orgs)
-2. Store it as `MIRROR_TOKEN` in this repo's Actions secrets
-3. The workflow handles the rest: creates missing repos in OOC, then `git push --mirror`
+## Install
 
-## How it works
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-- Lists all repos in OSP via the GitHub API
-- For each repo, checks if it exists in OOC — creates it if not
-- Does a bare clone + `git push --mirror` to sync all branches, tags, and refs
-- Skips the `org-mirror` repo itself to avoid recursion
+```bash
+git clone https://github.com/Interested-Deving-1896/org-mirror.git
+cd org-mirror
+```
+
+## Usage
+
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
+
+## Configuration
+
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/org-mirror`](https://github.com/Interested-Deving-1896/org-mirror) and mirrored through:
+
+```
+Interested-Deving-1896/org-mirror  ──►  OpenOS-Project-OSP/org-mirror  ──►  OpenOS-Project-Ecosystem-OOC/org-mirror
+```
+
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
+
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+<!-- License not detected — add a LICENSE file to this repo. -->
+<!-- AI:end:license -->
